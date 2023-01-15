@@ -12,12 +12,22 @@ class LifecycleB extends Component {
     }
 
     static getDerivedStateFromProps(props, state) {
-        console.log('Lifecycle getDerivedStateFromProps');
+        console.log('LifecycleB getDerivedStateFromProps');
         return null
     }
 
-    componentDidMount() {
-        console.log('Lifecycle componentDidMount');
+    shouldComponentUpdate() {
+        console.log('LifecycleB shouldComponentUpdate');
+        return true
+    }
+
+    getSnapshotBeforeUpdate(prevProps, prevState) {
+        console.log('LifecycleB getSnapshotBeforeUpdate');
+        return null
+    }
+
+    componentDidUpdate() {
+        console.log('LifecycleB componentDidUpdate');
     }
     
   render() {
